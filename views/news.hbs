@@ -1,0 +1,19 @@
+<h3>Your search for {{ search }}  under {{category}} </h3>
+<h3>return(s) {{lengthArray}} result</h3>
+
+{{#if hasContent}}
+    {{#each newsArray}}
+        <div>
+            <h5>{{ this.title }}</h5>
+            <img src="{{ this.image }}" alt="" width="300">
+            <h5>{{ this.summary }}</h5>
+            <span>{{ this.date }}</span>
+            <a href="{{this.link}}">Read more</a>
+            
+        </div>
+        <hr>
+    {{/each}}
+{{else}}
+    <h3>Your search returns 0 result</h3>
+{{/if}}
+
